@@ -1,0 +1,112 @@
+/* Resetear márgenes y padding para evitar inconsistencias */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo moderno con un degradado de colores */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff6b6b, #feca57, #54a0ff, #5f27cd);
+  background-size: 300% 300%;
+  animation: gradientBG 10s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación para que el degradado cambie de color suavemente */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estilo de la tarjeta principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Título */
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #2e86de;
+}
+
+/* Texto */
+p {
+  font-size: 1.2em;
+  color: #576574;
+  margin-bottom: 20px;
+}
+
+/* Botón llamativo */
+.btn {
+  background-color: #54a0ff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efectos al pasar el cursor por el botón */
+.btn:hover {
+  background-color: #2e86de;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos al hacer clic en el botón */
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+/* Animación de la rueda de carga */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ocultar elementos con la clase "hidden" */
+.hidden {
+  display: none;
+}
+
+/* Mostrar centrado el texto de "Instalando..." */
+#loading p {
+  font-size: 1.2em;
+  color: #576574;
+  text-align: center;
+  margin-top: 10px;
+}
